@@ -19,6 +19,7 @@ import java.util.Set;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.empty;
 import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class SiteGeoDaoRedisImplTest {
 
@@ -125,7 +126,7 @@ public class SiteGeoDaoRedisImplTest {
     }
 
     // Challenge #5
-    @Ignore
+
     @Test
     public void findByGeoWithExcessCapacity() {
         SiteGeoDao siteDao = new SiteGeoDaoRedisImpl(jedisPool);

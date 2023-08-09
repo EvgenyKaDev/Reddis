@@ -13,6 +13,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.time.ZonedDateTime;
+import org.junit.Test;
 
 public class SiteStatsDaoRedisImplTest {
     private static JedisPool jedisPool;

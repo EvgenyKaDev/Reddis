@@ -5,6 +5,7 @@ import com.redislabs.university.RU102J.JedisDaoTestBase;
 import com.redislabs.university.RU102J.TestKeyManager;
 import com.redislabs.university.RU102J.api.MeterReading;
 import org.junit.*;
+import org.junit.Test;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;

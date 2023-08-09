@@ -3,6 +3,7 @@ package com.redislabs.university.RU102J.dao;
 import com.redislabs.university.RU102J.HostPort;
 import com.redislabs.university.RU102J.TestKeyManager;
 import org.junit.*;
+import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;

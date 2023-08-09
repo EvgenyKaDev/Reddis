@@ -13,7 +13,7 @@ import io.dropwizard.setup.Environment;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
-public class RediSolarApplication extends Application<RediSolarConfiguration> {
+public class  RediSolarApplication extends Application<RediSolarConfiguration> {
 
     public static void main(final String[] args) throws Exception {
         new RediSolarApplication().run(args);
@@ -49,8 +49,11 @@ public class RediSolarApplication extends Application<RediSolarConfiguration> {
         // To use the geospatial features, replace the following lines with:
         // SiteGeoResource siteResource =
         //        new SiteGeoResource(new SiteGeoDaoRedisImpl(jedisPool));
-        SiteResource siteResource =
+        /*SiteResource siteResource =
                 new SiteResource(new SiteDaoRedisImpl(jedisPool));
+        environment.jersey().register(siteResource);*/
+
+        SiteGeoResource siteResource = new SiteGeoResource(new SiteGeoDaoRedisImpl(jedisPool));
         environment.jersey().register(siteResource);
 
         // For RedisTimeSeries: replace the next lines with
